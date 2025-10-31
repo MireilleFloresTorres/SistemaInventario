@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Producto">
+      <UniqueIdentifier>{dca52afa-3225-491a-81ba-1e917c41b5db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Producto">
+      <UniqueIdentifier>{7616a1b4-e81c-4819-a8fb-e4edc56c162b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -22,6 +28,12 @@
   <ItemGroup>
     <ClInclude Include="include\Prerequisites.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\Producto.h">
+      <Filter>Header Files\Producto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoComida.h">
+      <Filter>Header Files\Producto</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

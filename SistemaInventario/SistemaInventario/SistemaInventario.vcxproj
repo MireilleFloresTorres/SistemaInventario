@@ -23,6 +23,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\Producto\Producto.h" />
+    <ClInclude Include="include\Producto\ProductoComida.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
