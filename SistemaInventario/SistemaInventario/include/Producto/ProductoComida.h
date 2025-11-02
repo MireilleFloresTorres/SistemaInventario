@@ -7,6 +7,7 @@ ProductoComida : public Producto {
 public: 
 
 	ProductoComida(int id, int cantidad, double precio, const std::string& nombre);
+	void showInfo() const override;
 
 private: 
 	int id;

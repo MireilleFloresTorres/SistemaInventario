@@ -5,6 +5,6 @@ class
 Producto {
 public: 
 
-	virtual void ShowInfo() const = 0;
+	virtual void showInfo() const = 0;
 	virtual ~Producto() = default; 
 };
