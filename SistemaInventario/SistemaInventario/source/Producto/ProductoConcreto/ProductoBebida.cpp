@@ -1,0 +1,25 @@
+#include"Producto/ProductoConcreto/ProductoBebida.h"
+
+ProductoBebida::ProductoBebida(int codigo, std::string nombre, double precio,
+    int cantidad, int azucares)
+    : Producto(codigo, nombre, precio, cantidad), Azucares(azucares) {
+}
+
+int 
+ProductoBebida::getAzucares() const {
+    return Azucares;
+}
+
+void
+ProductoBebida::setAzucares(int azucares) {
+    Azucares = azucares;
+}
+
+void
+ProductoBebida::showInfo() const {
+    std::cout << "Código: " << getCodigo << std::endl;
+    std::cout << "Nombre: " << getNombre << std::endl;
+    std::cout << "Precio: " << getPrecio << std::endl;
+    std::cout << "Cantidad: " << getCantidad << std::endl;
+    std::cout << "Caducidad: " << getAzucares << std::endl;
+}

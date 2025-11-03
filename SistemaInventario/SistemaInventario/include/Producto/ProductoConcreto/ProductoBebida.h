@@ -4,7 +4,7 @@
 class
 	ProductoBebida : public Producto {
 public:
-	ProductoBebida(int codigo, std::string nombre, double precio, int cantidad, std::string& caducidad);
+	ProductoBebida(int codigo, std::string nombre, double precio, int cantidad, int azucares);
 	~ProductoBebida() override = default;
 
 	int 
@@ -14,4 +14,6 @@ public:
 	setAzucares(int azucares);
 
 	void showInfo() const override;
+private:
+	int Azucares; 
 };

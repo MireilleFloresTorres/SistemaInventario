@@ -1,8 +1,8 @@
 #include"Prerequisites.h"
 #include "Producto\Producto.h"
 
-Producto::Producto(int id, std::string nombre, int cantidad, double precio)
-	: Codigo(id), Nombre(nombre), Precio(precio), Cantidad(cantidad) {
+Producto::Producto(int codigo, std::string nombre, int cantidad, double precio)
+	: Codigo(codigo), Nombre(nombre), Precio(precio), Cantidad(cantidad) {
 }
 int 
 Producto::getCodigo() const {

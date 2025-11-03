@@ -21,8 +21,9 @@ public:
 	 * @brief getters.
 	 */
 	int getCodigo() const;
-	int getCnatidad() const;
+	int getCantidad() const;
 	double getPrecio() const; 
+	std::string getNombre() const;
 
 	/**
 	 * @brief Asigna un nombre al producto.
@@ -60,8 +61,8 @@ protected:
 	// clases derivadas hagan objetos no externos 
 
 private:
-	int codigo;
-	int cantidad;
-	double precio;
-	std::string nombre; 
+	int Codigo;
+	int Cantidad;
+	double Precio;
+	std::string Nombre; 
 };
