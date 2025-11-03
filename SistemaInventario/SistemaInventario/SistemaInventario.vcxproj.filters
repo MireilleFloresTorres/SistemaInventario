@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Producto\ProductoFactory">
       <UniqueIdentifier>{a7de7158-1ccb-48f1-ab6a-5a3231eac707}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Observer">
+      <UniqueIdentifier>{c880cf74-7a6d-41da-8cc2-852d7ac02e66}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -91,6 +94,15 @@
     </ClInclude>
     <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h">
       <Filter>Header Files\Producto\ProductoFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\Observer\Observer.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\Observer\Sujeto.h">
+      <Filter>Header Files\Observer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

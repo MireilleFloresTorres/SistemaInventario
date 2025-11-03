@@ -7,3 +7,4 @@ MedicamentoFactory::MedicamentoFactory(int codigo, std::string nombre, double pr
 
 Producto* MedicamentoFactory::crearProducto() const {
 	return new ProductoMedicamento(Codigo, Nombre, Precio, Cantidad, Administracion);
+}

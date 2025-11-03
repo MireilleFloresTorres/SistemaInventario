@@ -29,9 +29,12 @@
     <ClCompile Include="source\Producto\ProductoFactory\MedicamentoFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\json.hpp" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Producto\FabricaAbstracta.h" />
     <ClInclude Include="include\Producto\FabricaProducto.h" />
+    <ClInclude Include="include\Producto\Observer\Observer.h" />
+    <ClInclude Include="include\Producto\Observer\Sujeto.h" />
     <ClInclude Include="include\Producto\Producto.h" />
     <ClInclude Include="include\Producto\ProductoConcreto\ProductoBebida.h" />
     <ClInclude Include="include\Producto\ProductoConcreto\ProductoComida.h" />
