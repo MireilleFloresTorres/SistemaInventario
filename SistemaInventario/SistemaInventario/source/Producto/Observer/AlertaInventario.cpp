@@ -1,4 +1,3 @@
-#include"Prerequisites.h"
 #include"Producto/Observer/AlertaInventario.h"
 
 void AlertaInventario::actualizar(const std::string& alerta) {

@@ -34,6 +34,15 @@
     <Filter Include="Header Files\Observer">
       <UniqueIdentifier>{c880cf74-7a6d-41da-8cc2-852d7ac02e66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Producto\Observer">
+      <UniqueIdentifier>{38fa23a6-9116-45f4-8fe5-51cc0327fe58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Inventario">
+      <UniqueIdentifier>{d2648805-177e-4312-99d2-ea57e9ae35a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Producto\Inventario">
+      <UniqueIdentifier>{5157dd5b-4553-44ba-926a-ee3be61dc9ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -59,6 +68,18 @@
     </ClCompile>
     <ClCompile Include="source\Producto\ProductoFactory\MedicamentoFactory.cpp">
       <Filter>Source Files\Producto\ProductoFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\Observer\Sujeto.cpp">
+      <Filter>Source Files\Producto\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\Observer\AlertaInventario.cpp">
+      <Filter>Source Files\Producto\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\Inventario\Inventario.cpp">
+      <Filter>Source Files\Producto\Inventario</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AdapterJson.cpp">
+      <Filter>Source Files\Producto</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +124,15 @@
     </ClInclude>
     <ClInclude Include="include\Producto\Observer\Sujeto.h">
       <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\Observer\AlertaInventario.h">
+      <Filter>Header Files\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\Inventario\Inventario.h">
+      <Filter>Header Files\Inventario</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AdapterJson.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

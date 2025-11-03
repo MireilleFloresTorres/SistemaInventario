@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\AdapterJson.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Producto\Inventario\Inventario.cpp" />
+    <ClCompile Include="source\Producto\Observer\AlertaInventario.cpp" />
+    <ClCompile Include="source\Producto\Observer\Sujeto.cpp" />
     <ClCompile Include="source\Producto\Producto.cpp" />
     <ClCompile Include="source\Producto\ProductoConcreto\ProductoBebida.cpp" />
     <ClCompile Include="source\Producto\ProductoConcreto\ProductoComida.cpp" />
@@ -29,10 +33,13 @@
     <ClCompile Include="source\Producto\ProductoFactory\MedicamentoFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AdapterJson.h" />
     <ClInclude Include="include\json.hpp" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Producto\FabricaAbstracta.h" />
     <ClInclude Include="include\Producto\FabricaProducto.h" />
+    <ClInclude Include="include\Producto\Inventario\Inventario.h" />
+    <ClInclude Include="include\Producto\Observer\AlertaInventario.h" />
     <ClInclude Include="include\Producto\Observer\Observer.h" />
     <ClInclude Include="include\Producto\Observer\Sujeto.h" />
     <ClInclude Include="include\Producto\Producto.h" />
