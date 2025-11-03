@@ -10,5 +10,7 @@ public:
 	std::string getCaducidad() const; 
 	void setCaducidad(const std::string& fecha);
 
-	void showInfo() const override; 
+	void showInfo() const override;   
+private: 
+	std::string caducidad; 
 };
