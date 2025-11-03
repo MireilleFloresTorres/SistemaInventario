@@ -19,10 +19,40 @@
     <Filter Include="Source Files\Producto">
       <UniqueIdentifier>{7616a1b4-e81c-4819-a8fb-e4edc56c162b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Producto\Producto concreto">
+      <UniqueIdentifier>{be0617ca-2c17-4976-ad53-d08a5eed013c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Producto\ProductoConcreto">
+      <UniqueIdentifier>{2a4db0c8-d009-44db-97bf-a268c896bc84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Producto\ProductoFactory">
+      <UniqueIdentifier>{74ea840f-a5f1-44d4-b0bb-f688cb9c618f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Producto\ProductoFactory">
+      <UniqueIdentifier>{a7de7158-1ccb-48f1-ab6a-5a3231eac707}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\Producto.cpp">
+      <Filter>Source Files\Producto</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\ProductoConcreto\ProductoBebida.cpp">
+      <Filter>Source Files\Producto\ProductoConcreto</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\ProductoConcreto\ProductoComida.cpp">
+      <Filter>Source Files\Producto\ProductoConcreto</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\ProductoConcreto\ProductoMedicamento.cpp">
+      <Filter>Source Files\Producto\ProductoConcreto</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\ProductoFactory\ComidaFactory.cpp">
+      <Filter>Source Files\Producto\ProductoFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Producto\ProductoFactory\BebidaFactory.cpp">
+      <Filter>Source Files\Producto\ProductoFactory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,8 +62,26 @@
     <ClInclude Include="include\Producto\Producto.h">
       <Filter>Header Files\Producto</Filter>
     </ClInclude>
-    <ClInclude Include="include\Producto\ProductoComida.h">
+    <ClInclude Include="include\Producto\FabricaAbstracta.h">
       <Filter>Header Files\Producto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoConcreto\ProductoComida.h">
+      <Filter>Header Files\Producto\Producto concreto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoConcreto\ProductoBebida.h">
+      <Filter>Header Files\Producto\Producto concreto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\FabricaProducto.h">
+      <Filter>Header Files\Producto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoConcreto\ProductoMedicamento.h">
+      <Filter>Header Files\Producto\Producto concreto</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoFactory\ProductoFactory.h">
+      <Filter>Header Files\Producto\ProductoFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h">
+      <Filter>Header Files\Producto\ProductoFactory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

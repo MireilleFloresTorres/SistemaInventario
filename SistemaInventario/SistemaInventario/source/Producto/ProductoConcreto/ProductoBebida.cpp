@@ -17,9 +17,9 @@ ProductoBebida::setAzucares(int azucares) {
 
 void
 ProductoBebida::showInfo() const {
-    std::cout << "Código: " << getCodigo << std::endl;
-    std::cout << "Nombre: " << getNombre << std::endl;
-    std::cout << "Precio: " << getPrecio << std::endl;
-    std::cout << "Cantidad: " << getCantidad << std::endl;
-    std::cout << "Caducidad: " << getAzucares << std::endl;
+    std::cout << "Código: " << getCodigo() << std::endl;
+    std::cout << "Nombre: " << getNombre() << std::endl;
+    std::cout << "Precio: " << getPrecio() << std::endl;
+    std::cout << "Cantidad: " << getCantidad() << std::endl;
+    std::cout << "Caducidad: " << getAzucares() << std::endl;
 }

@@ -20,11 +20,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Producto\Producto.cpp" />
+    <ClCompile Include="source\Producto\ProductoConcreto\ProductoBebida.cpp" />
+    <ClCompile Include="source\Producto\ProductoConcreto\ProductoComida.cpp" />
+    <ClCompile Include="source\Producto\ProductoConcreto\ProductoMedicamento.cpp" />
+    <ClCompile Include="source\Producto\ProductoFactory\BebidaFactory.cpp" />
+    <ClCompile Include="source\Producto\ProductoFactory\ComidaFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\Producto\FabricaAbstracta.h" />
+    <ClInclude Include="include\Producto\FabricaProducto.h" />
     <ClInclude Include="include\Producto\Producto.h" />
-    <ClInclude Include="include\Producto\ProductoComida.h" />
+    <ClInclude Include="include\Producto\ProductoConcreto\ProductoBebida.h" />
+    <ClInclude Include="include\Producto\ProductoConcreto\ProductoComida.h" />
+    <ClInclude Include="include\Producto\ProductoConcreto\ProductoMedicamento.h" />
+    <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h" />
+    <ClInclude Include="include\Producto\ProductoFactory\ProductoFactory.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

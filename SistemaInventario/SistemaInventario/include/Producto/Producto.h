@@ -52,6 +52,7 @@ public:
 
 	virtual void showInfo() const = 0; 
 
+
 	/**
 	* @brief Constructor protegido.
 	*/
