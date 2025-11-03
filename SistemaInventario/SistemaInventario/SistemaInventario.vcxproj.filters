@@ -54,6 +54,9 @@
     <ClCompile Include="source\Producto\ProductoFactory\BebidaFactory.cpp">
       <Filter>Source Files\Producto\ProductoFactory</Filter>
     </ClCompile>
+    <ClCompile Include="source\Producto\ProductoFactory\MedicamentoFactory.cpp">
+      <Filter>Source Files\Producto\ProductoFactory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Prerequisites.h">
@@ -81,6 +84,12 @@
       <Filter>Header Files\Producto\ProductoFactory</Filter>
     </ClInclude>
     <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h">
+      <Filter>Header Files\Producto\ProductoFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoFactory\BebidaFactory.h">
+      <Filter>Header Files\Producto\ProductoFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h">
       <Filter>Header Files\Producto\ProductoFactory</Filter>
     </ClInclude>
   </ItemGroup>

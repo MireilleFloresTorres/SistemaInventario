@@ -1,7 +1,7 @@
 #include"Producto/ProductoConcreto/ProductoMedicamento.h"
 
 ProductoMedicamento::ProductoMedicamento(int codigo, std::string nombre, double precio,
-    int cantidad, std::string& administracion)
+    int cantidad, std::string administracion)
     : Producto(codigo, nombre, precio, cantidad), Administracion(administracion) {
 }
 

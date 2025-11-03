@@ -4,7 +4,8 @@
 class
 	ProductoMedicamento : public Producto {
 public:
-	ProductoMedicamento(int codigo, std::string nombre, double precio, int cantidad, std::string& administracion);
+	ProductoMedicamento(int codigo, std::string nombre, double precio,
+		int cantidad, std::string administracion);
 	~ProductoMedicamento() override = default;
 
 	std::string getAdministracion() const; 
