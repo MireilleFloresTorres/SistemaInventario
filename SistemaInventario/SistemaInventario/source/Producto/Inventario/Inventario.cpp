@@ -1,6 +1,6 @@
 #include "Prerequisites.h"
 #include "Producto/Inventario/Inventario.h"
-
+#include "AdapterJson.h"
 
 Inventario* Inventario::intancia = nullptr;
 int Inventario::nextId = 1;
@@ -26,61 +26,61 @@ int Inventario::getNextId() {
 
 void Inventario::StockBajo(Producto* producto) {
     if (producto->getCantidad() < 10) {
-        string mensaje = "El producto '" + producto->getNombre() +
-            "' (Codigo: " + to_string(producto->getCodigo()) +
-            ") tiene stock bajo: " + to_string(producto->getCantidad()) + " unidades";
+        std::string mensaje = "El producto '" + producto->getNombre() +
+            "' (Codigo: " + std::to_string(producto->getCodigo()) +
+            ") tiene stock bajo: " + std::to_string(producto->getCantidad()) + " unidades";
         notificar(mensaje);
     }
 }
 
 void Inventario::addProducto(Producto* producto) {
     productos.push_back(producto);
-    cout << "Producto agregado exitosamente." << endl;
+    std::cout << "Producto agregado exitosamente." << std::endl;
     StockBajo(producto);
 }
 
-bool Inventario::eliminarProducto(int Codigo) {
+bool Inventario::deleteProducto(int Codigo) {
     for (size_t i = 0; i < productos.size(); i++) {
         if (productos[i]->getCodigo() == Codigo) {
             delete productos[i];
             productos[i] = productos.back();
             productos.pop_back();
-            cout << "Producto eliminado exitosamente." << endl;
+            std::cout << "Producto eliminado exitosamente." << std::endl;
             return true;
         }
     }
-    cout << "Producto no encontrado." << endl;
+    std::cout << "Producto no encontrado." << std::endl;
     return false;
 }
 
 bool Inventario::editarProducto(int Codigo) {
     Producto* producto = buscarProducto(Codigo);
     if (!producto) {
-        cout << "Producto no encontrado." << endl;
+        std::cout << "Producto no encontrado." << std::endl;
         return false;
     }
 
     producto->showInfo();
 
-    string nuevoNombre;
+    std::string nuevoNombre;
     double nuevoPrecio;
     int nuevaCantidad;
 
-    cout << "Nuevo nombre: " << producto->getNombre() << "): ";
-    cin.ignore();
-    getline(cin, nuevoNombre);
+    std::cout << "Nuevo nombre : " << producto->getNombre() << "): ";
+    std::cin.ignore();
+    std::getline(std::cin, nuevoNombre);
 
-    cout << "Nuevo precio: $" << producto->getPrecio() << "): ";
-    cin >> nuevoPrecio;
+    std::cout << "Nuevo precio: " << producto->getPrecio() << "): ";
+    std::cin >> nuevoPrecio;
 
-    cout << "Nueva cantidad: " << producto->getCantidad() << "): ";
-    cin >> nuevaCantidad;
+    std::cout << "Nueva cantidad: " << producto->getCantidad() << "): ";
+    std::cin >> nuevaCantidad;
 
     producto->setNombre(nuevoNombre);
     producto->setPrecio(nuevoPrecio);
     producto->setCantidad(nuevaCantidad);
 
-    cout << "Producto editado yeii" << endl;
+    std::cout << "Producto editado :)." << std::endl;
     StockBajo(producto);
     return true;
 }
@@ -88,17 +88,17 @@ bool Inventario::editarProducto(int Codigo) {
 bool Inventario::venderProducto(int Codigo, int Cantidad) {
     Producto* producto = buscarProducto(Codigo);
     if (!producto) {
-        cout << "Producto no encontrado :( " << endl;
+        std::cout << "Producto no encontrado :(" << std::endl;
         return false;
     }
 
     if (producto->getCantidad() < Cantidad) {
-        cout << "Stock insuficiente. Tu stock disponible: " << producto->getCantidad() << endl;
+        std::cout << "Stock insuficient el stock disponible: " << producto->getCantidad() << std::endl;
         return false;
     }
 
     producto->setCantidad(producto->getCantidad() - Cantidad);
-    cout << "Venta realizada :) Stock restante: " << producto->getCantidad() << endl;
+    std::cout << "Venta realizada. Stock restante: " << producto->getCantidad() << std::endl;
     StockBajo(producto);
     return true;
 }
@@ -106,12 +106,12 @@ bool Inventario::venderProducto(int Codigo, int Cantidad) {
 bool Inventario::comprarProducto(int Codigo, int Cantidad) {
     Producto* producto = buscarProducto(Codigo);
     if (!producto) {
-        cout << "Producto no encontrado :(" << endl;
+        std::cout << "Producto no encontrado :(" << std::endl;
         return false;
     }
 
     producto->setCantidad(producto->getCantidad() + Cantidad);
-    cout << "Compra registrada el nuevo stock es de: " << producto->getCantidad() << endl;
+    std::cout << "Compra registrada el nuuevo stock: " << producto->getCantidad() << std::endl;
     return true;
 }
 
@@ -126,29 +126,30 @@ Producto* Inventario::buscarProducto(int codigo) {
 
 void Inventario::mostrarTodos() const {
     if (productos.empty()) {
-        cout << "El inventario esta vacio." << endl;
+        std::cout << "El inventario esta vacio." << std::endl;
         return;
     }
 
-    cout << "INVENTARIO" << endl;
+    std::cout << "INVENTARIO" << std::endl;
     for (const auto& producto : productos) {
         producto->showInfo();
-        cout << "--------------------------------" << endl;
+        std::cout << "--------------------------------" << std::endl;
     }
+
 }
 
-const vector<Producto*>& Inventario::getProductos() const {
+const std::vector<Producto*>& Inventario::getProductos() const {
     return productos;
 }
 
-bool Inventario::saveJSON(const string& name) {
+bool Inventario::saveJSON(const std::string& name) {
     AdapterJson adapter(name);
     return adapter.saveProductos(productos);
 }
 
-void Inventario::cargarJSON(const string& name) {
+void Inventario::cargarJSON(const std::string& name) {
     AdapterJson adapter(name);
-    vector<Producto*> productosNuevos = adapter.cargarProductos();
+    std::vector<Producto*> productosNuevos = adapter.cargarProductos();
 
     for (auto producto : productosNuevos) {
         productos.push_back(producto);

@@ -5,3 +5,7 @@
 #include"Producto/ProductoFactory/ComidaFactory.h"
 #include"Producto/ProductoFactory/MedicamentoFactory.h"
 
+int main() {
+    
+    return 0;
+}
