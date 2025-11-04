@@ -15,6 +15,7 @@ public:
 	setAzucares(int azucares);
 
 	void showInfo() const override;
+	std::string getTipo() const override;
 private:
 	int Azucares; 
 };

@@ -18,5 +18,6 @@ void Sujeto::deleteObservador(Observer* observador) {
 			observadores[i] = observadores.back();
 			observadores.pop_back();
 			break;
+		}
 	}
 }

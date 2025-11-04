@@ -15,6 +15,7 @@ public:
 
 	void
 	showInfo() const override; 
+	std::string getTipo() const override;
 
 private:
 	std::string Administracion;

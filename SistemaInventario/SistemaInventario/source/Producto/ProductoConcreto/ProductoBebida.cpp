@@ -14,7 +14,9 @@ void
 ProductoBebida::setAzucares(int azucares) {
     Azucares = azucares;
 }
-
+std::string ProductoBebida::getTipo() const {
+    return "Bebida";
+}
 void
 ProductoBebida::showInfo() const {
     std::cout << "Código: " << getCodigo() << std::endl;

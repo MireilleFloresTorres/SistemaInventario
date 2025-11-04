@@ -14,6 +14,9 @@ ProductoComida::setCaducidad(const std::string& fecha) {
     Caducidad = fecha;
 }
 
+std::string ProductoComida::getTipo() const {
+    return "Comida";
+}
 void
 ProductoComida::showInfo() const {
     std::cout << "Codigo: " << getCodigo() << std::endl;

@@ -13,6 +13,7 @@ public:
 	void setCaducidad(const std::string& fecha);
 
 	void showInfo() const override;   
+	std::string getTipo() const override;
 private: 
 	std::string Caducidad; 
 };

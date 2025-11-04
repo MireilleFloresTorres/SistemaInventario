@@ -6,7 +6,7 @@ class
 AdapterJson {
 public: AdapterJson(const std::string& archivo); 
 	  //recibe nombre del archivo
-	  bool saveProductos(const std::vector<Producto*> productos);
+	  bool saveProductos(const std::vector<Producto*>& productos);
 	  //guarda la lista de productos 
 	  //vector de puteros a producto 
 	  std::vector<Producto*> cargarProductos();

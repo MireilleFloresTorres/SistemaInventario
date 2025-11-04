@@ -51,6 +51,7 @@ public:
 	 */
 
 	virtual void showInfo() const = 0; 
+	virtual std::string getTipo() const = 0;
 
 
 	/**

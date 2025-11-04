@@ -14,7 +14,9 @@ void
 ProductoMedicamento::setAdministracion(const std::string& administracion){
     Administracion = administracion;
 }
-
+std::string ProductoMedicamento::getTipo() const {
+    return "Medicamento";
+}
 void
 ProductoMedicamento::showInfo() const {
     std::cout << "Código: " << getCodigo() << std::endl;
