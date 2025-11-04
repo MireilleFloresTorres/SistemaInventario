@@ -9,11 +9,11 @@ int main() {
     std::ifstream archivo("Inventario.json");
 
     if (!archivo.is_open()) {
-        std::cout << "❌ No se pudo abrir el archivo inventario.json\n";
+        std::cout << "No se pudo abrir el archivo inventario.json\n";
         std::cout << "Verifica que esté en la misma carpeta que el .exe (por ejemplo, /Debug)\n";
     }
     else {
-        std::cout << "✅ Archivo inventario.json encontrado correctamente.\n";
+        std::cout << "Archivo inventario.json encontrado correctamente.\n";
         archivo.close();
     }
 
