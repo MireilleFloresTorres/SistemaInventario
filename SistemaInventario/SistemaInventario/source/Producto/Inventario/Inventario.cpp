@@ -35,7 +35,7 @@ void Inventario::StockBajo(Producto* producto) {
 
 void Inventario::addProducto(Producto* producto) {
     productos.push_back(producto);
-    std::cout << "Producto agregado exitosamente." << std::endl;
+    std::cout << "Producto agregado" << std::endl;
     StockBajo(producto);
 }
 
@@ -45,7 +45,7 @@ bool Inventario::deleteProducto(int Codigo) {
             delete productos[i];
             productos[i] = productos.back();
             productos.pop_back();
-            std::cout << "Producto eliminado exitosamente." << std::endl;
+            std::cout << "Producto eliminado exitosamente" << std::endl;
             return true;
         }
     }
@@ -56,7 +56,7 @@ bool Inventario::deleteProducto(int Codigo) {
 bool Inventario::editarProducto(int Codigo) {
     Producto* producto = buscarProducto(Codigo);
     if (!producto) {
-        std::cout << "Producto no encontrado." << std::endl;
+        std::cout << "Producto no encontrado" << std::endl;
         return false;
     }
 

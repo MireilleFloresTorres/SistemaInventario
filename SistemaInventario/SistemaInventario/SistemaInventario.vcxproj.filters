@@ -78,8 +78,8 @@
     <ClCompile Include="source\Producto\Inventario\Inventario.cpp">
       <Filter>Source Files\Producto\Inventario</Filter>
     </ClCompile>
-    <ClCompile Include="source\AdapterJson.cpp">
-      <Filter>Source Files\Producto</Filter>
+    <ClCompile Include="source\Producto\Inventario\AdapterJson.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,9 +116,6 @@
     <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h">
       <Filter>Header Files\Producto\ProductoFactory</Filter>
     </ClInclude>
-    <ClInclude Include="include\json.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Producto\Observer\Observer.h">
       <Filter>Header Files\Observer</Filter>
     </ClInclude>
@@ -134,5 +131,11 @@
     <ClInclude Include="include\AdapterJson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Inventario.json" />
   </ItemGroup>
 </Project>

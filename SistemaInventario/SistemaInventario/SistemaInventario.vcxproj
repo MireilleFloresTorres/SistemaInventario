@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\AdapterJson.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Producto\Inventario\AdapterJson.cpp" />
     <ClCompile Include="source\Producto\Inventario\Inventario.cpp" />
     <ClCompile Include="source\Producto\Observer\AlertaInventario.cpp" />
     <ClCompile Include="source\Producto\Observer\Sujeto.cpp" />
@@ -50,6 +50,9 @@
     <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\ProductoFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Inventario.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
