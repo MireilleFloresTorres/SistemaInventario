@@ -4,8 +4,11 @@
 #include"Producto/ProductoFactory/BebidaFactory.h"
 #include"Producto/ProductoFactory/ComidaFactory.h"
 #include"Producto/ProductoFactory/MedicamentoFactory.h"
+#include <filesystem>
+namespace fs = std::filesystem;
 
 int main() {
+    std::cout << "Directorio actual: " << fs::current_path() << std::endl;
     std::ifstream archivo("Inventario.json");
 
     if (!archivo.is_open()) {
