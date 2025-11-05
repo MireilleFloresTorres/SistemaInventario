@@ -26,10 +26,10 @@ int Inventario::getNextId() {
 
 void Inventario::StockBajo(Producto* producto) {
     if (producto->getCantidad() < 10) {
-        std::string mensaje = "El producto '" + producto->getNombre() +
+        std::string alerta = "El producto '" + producto->getNombre() +
             "' (Codigo: " + std::to_string(producto->getCodigo()) +
             ") tiene stock bajo: " + std::to_string(producto->getCantidad()) + " unidades";
-        notificar(mensaje);
+        notificar(alerta);
     }
 }
 
@@ -45,7 +45,7 @@ bool Inventario::deleteProducto(int Codigo) {
             delete productos[i];
             productos[i] = productos.back();
             productos.pop_back();
-            std::cout << "Producto eliminado exitosamente" << std::endl;
+            std::cout << "Producto eliminado" << std::endl;
             return true;
         }
     }
