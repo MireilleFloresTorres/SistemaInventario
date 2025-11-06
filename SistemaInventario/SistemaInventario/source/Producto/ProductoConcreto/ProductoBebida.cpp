@@ -2,7 +2,7 @@
 
 ProductoBebida::ProductoBebida(int codigo, std::string nombre, double precio,
     int cantidad, int azucares)
-    : Producto(codigo, nombre, precio, cantidad), Azucares(azucares) {
+    : Producto(codigo, nombre, cantidad, precio), Azucares(azucares) {
 }
 
 int 
