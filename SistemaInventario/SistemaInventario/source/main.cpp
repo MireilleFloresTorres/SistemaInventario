@@ -5,6 +5,31 @@
 #include "Producto/ProductoFactory/ComidaFactory.h"
 #include "Producto/ProductoFactory/MedicamentoFactory.h"
 
+/**
+ * @file main.cpp
+ * @file Inventario.h
+ * @file AlertaInventario.h
+ * @file BebidaFactory.h
+ * @file ComidaFactory.h
+ * @file MedicamentoFactory.h
+ * @brief Sistema de gestión de inventario para Farmacia Guadalajara
+ * @details Implementa un menú interactivo para administrar productos (comida, bebida, medicamento)
+ */
+
+ /**
+  * @brief Entrada del mamin en consola
+  * @return código de salida0
+  *
+  * @details Crea una instancia única del inventario, configura observadores para alertas
+  *          de stock bajo, con un menú con las siguientes opciones:
+  *          - Agregar productos (comida, bebida, medicamento)
+  *          - Editar productos existentes
+  *          - Eliminar productos
+  *          - Realizar ventas
+  *          - Realizar compras
+  *          - Mostrar inventario completo
+  *          - Guardar datos en JSON
+  */
 int main() {
     // Singleton
     Inventario* inventario = Inventario::getInstance();
@@ -35,7 +60,7 @@ int main() {
         std::cin >> opcion;
 
         switch (opcion) {
-        case 1: {
+        case 1: {/** @brief Agregar nuevo producto al inventario */
             int tipo;
             std::cout << "Tipo de producto:" << std::endl;
             std::cout << "1. Comida" << std::endl;
@@ -95,7 +120,7 @@ int main() {
             break;
         }
 
-        case 2: { // editar
+        case 2: { /** @brief Editar producto existente por código */
             int codigo;
             std::cout << "Codigo del producto a editar: ";
             std::cin >> codigo;
@@ -109,7 +134,7 @@ int main() {
             break;
         }
 
-        case 3: { //eliminar
+        case 3: { /** @brief Eliminar producto del inventario */
             int codigo;
             std::cout << "Codigo del producto a eliminar: ";
             std::cin >> codigo;
@@ -123,7 +148,7 @@ int main() {
             break;
         }
 
-        case 4: { // la vendimia
+        case 4: { /** @brief Realizar venta y reducir stock */
             int codigo;
             int cantidad;
             std::cout << "Codigo del producto: ";
@@ -140,7 +165,7 @@ int main() {
             break;
         }
 
-        case 5: { // COMPRAR
+        case 5: { /** @brief Realizar compra e incrementar stock */
             int codigo;
             int cantidad;
             std::cout << "Codigo del producto: ";
@@ -157,24 +182,24 @@ int main() {
             break;
         }
 
-        case 6: { // MOSTRAR
+        case 6: { /** @brief Mostrar todos los productos del inventario */
             inventario->mostrarTodos();
             break;
         }
 
-        case 7: { // GUARDAR JSON
+        case 7: { /** @brief Guardar inventario en archivo JSON */
             inventario->saveJSON("Inventario.json");
             std::cout << "El inventario ha sido guardado." << std::endl;
             break;
         }
 
-        case 8: { // CARGAR JSON
+        case 8: { /** @brief Cargar inventario desde archivo JSON */
             inventario->cargarJSON("Inventario.json");
             std::cout << "El inventario ha sido cargado." << std::endl;
             break;
         }
 
-        case 9: {
+        case 9: { /** @brief Salir del sistema con opción de guardar */
             std::cout << "\nDeseas guardar el inventario antes de salir? (s/n): ";
             char respuesta;
             std::cin >> respuesta;

@@ -1,5 +1,8 @@
 #include"Producto/ProductoConcreto/ProductoBebida.h"
 
+/**
+ * @brief Constructor de ProductoComida.
+ */
 ProductoBebida::ProductoBebida(int codigo, std::string nombre, double precio,
     int cantidad, int azucares)
     : Producto(codigo, nombre, cantidad, precio), Azucares(azucares) {
