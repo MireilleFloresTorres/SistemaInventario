@@ -26,5 +26,5 @@ ProductoBebida::showInfo() const {
     std::cout << "Nombre: " << getNombre() << std::endl;
     std::cout << "Precio: " << getPrecio() << std::endl;
     std::cout << "Cantidad: " << getCantidad() << std::endl;
-    std::cout << "Caducidad: " << getAzucares() << std::endl;
+    std::cout << "Azucares: " << getAzucares() << std::endl;
 }

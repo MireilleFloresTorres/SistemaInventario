@@ -40,5 +40,5 @@ ProductoMedicamento::showInfo() const {
     std::cout << "Nombre: " << getNombre() << std::endl;
     std::cout << "Precio: " << getPrecio() << std::endl;
     std::cout << "Cantidad: " << getCantidad() << std::endl;
-    std::cout << "Caducidad: " << getAdministracion() << std::endl;
+    std::cout << "Via de administracion: " << getAdministracion() << std::endl;
 }
