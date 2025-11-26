@@ -31,6 +31,8 @@
     <ClCompile Include="source\Producto\ProductoFactory\BebidaFactory.cpp" />
     <ClCompile Include="source\Producto\ProductoFactory\ComidaFactory.cpp" />
     <ClCompile Include="source\Producto\ProductoFactory\MedicamentoFactory.cpp" />
+    <ClCompile Include="source\Ticket\GenerarTicket.cpp" />
+    <ClCompile Include="source\Ticket\Ticket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AdapterJson.h" />
@@ -50,6 +52,8 @@
     <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\ProductoFactory.h" />
+    <ClInclude Include="include\Ticket\GenerarTicket.h" />
+    <ClInclude Include="include\Ticket\Ticket.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Inventario.json" />
