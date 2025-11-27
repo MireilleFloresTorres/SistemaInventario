@@ -31,14 +31,8 @@
     <Filter Include="Source Files\Producto\ProductoFactory">
       <UniqueIdentifier>{a7de7158-1ccb-48f1-ab6a-5a3231eac707}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Observer">
-      <UniqueIdentifier>{c880cf74-7a6d-41da-8cc2-852d7ac02e66}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Producto\Observer">
       <UniqueIdentifier>{38fa23a6-9116-45f4-8fe5-51cc0327fe58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Inventario">
-      <UniqueIdentifier>{d2648805-177e-4312-99d2-ea57e9ae35a7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Producto\Inventario">
       <UniqueIdentifier>{5157dd5b-4553-44ba-926a-ee3be61dc9ed}</UniqueIdentifier>
@@ -48,6 +42,12 @@
     </Filter>
     <Filter Include="Source Files\Ticket">
       <UniqueIdentifier>{58ec7832-cba3-45b5-b791-780748ed9116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Producto\Inventario">
+      <UniqueIdentifier>{d2648805-177e-4312-99d2-ea57e9ae35a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Producto\Observer">
+      <UniqueIdentifier>{c880cf74-7a6d-41da-8cc2-852d7ac02e66}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -129,16 +129,16 @@
       <Filter>Header Files\Producto\ProductoFactory</Filter>
     </ClInclude>
     <ClInclude Include="include\Producto\Observer\Observer.h">
-      <Filter>Header Files\Observer</Filter>
+      <Filter>Header Files\Producto\Observer</Filter>
     </ClInclude>
     <ClInclude Include="include\Producto\Observer\Sujeto.h">
-      <Filter>Header Files\Observer</Filter>
+      <Filter>Header Files\Producto\Observer</Filter>
     </ClInclude>
     <ClInclude Include="include\Producto\Observer\AlertaInventario.h">
-      <Filter>Header Files\Observer</Filter>
+      <Filter>Header Files\Producto\Observer</Filter>
     </ClInclude>
     <ClInclude Include="include\Producto\Inventario\Inventario.h">
-      <Filter>Header Files\Inventario</Filter>
+      <Filter>Header Files\Producto\Inventario</Filter>
     </ClInclude>
     <ClInclude Include="include\AdapterJson.h">
       <Filter>Header Files</Filter>
