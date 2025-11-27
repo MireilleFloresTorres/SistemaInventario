@@ -9,8 +9,11 @@ void Correo::facturaCorreo(const Ticket& ticket, const std::string& correo) {
 
 	std::cout << "Productos: "<< std::endl; 
 
-	for (const auto& product : product.addProducts()) {
-
+	for (const auto& product : ticket.getProducts()) {
 		std::cout << product.nameProduct << product.cantidad << product.subtotal << std::endl; 
 	}
+
+	std::cout << "Total: " << ticket.getTotal() << std::endl; 
+	std::cout << "Metodo de pago: " << ticket.getMetodoPago()<<std::endl; 
+	std::cout << "El correo ha sido jenviado" << std::endl; 
 }

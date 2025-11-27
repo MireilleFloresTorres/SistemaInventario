@@ -49,6 +49,12 @@
     <Filter Include="Header Files\Producto\Observer">
       <UniqueIdentifier>{c880cf74-7a6d-41da-8cc2-852d7ac02e66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Strategy">
+      <UniqueIdentifier>{c6d8f3b3-218b-4e06-9b66-a2851a0b4466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Strategy">
+      <UniqueIdentifier>{ef36917b-74c6-4d9e-9904-f46ef9e12715}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -91,6 +97,9 @@
       <Filter>Source Files\Ticket</Filter>
     </ClCompile>
     <ClCompile Include="source\Ticket\GenerarTicket.cpp">
+      <Filter>Source Files\Ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ticket\Correo.cpp">
       <Filter>Source Files\Ticket</Filter>
     </ClCompile>
   </ItemGroup>
@@ -151,6 +160,12 @@
     </ClInclude>
     <ClInclude Include="include\Ticket\GenerarTicket.h">
       <Filter>Header Files\Ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ticket\Correo.h">
+      <Filter>Header Files\Ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Strategy\PagoStrategy.h">
+      <Filter>Header Files\Strategy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
