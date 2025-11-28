@@ -8,6 +8,15 @@
 using json = nlohmann::json;
 #include <ctime>
 
+//el producto dentro del ticket 
+struct Iticket {
+	std::string nameProduct;
+	int cantidad;
+	double precioU;
+	double subtotal;
+};
+
+
 struct 
 Fecha {
 	int dia; 
@@ -19,7 +28,6 @@ Fecha {
 	void
 		getActual() {
 		time_t t = time(0);
-		tm now;
 		tm now;
 		if (localtime_s(&now, &t) == 0) {
 			dia = now.tm_mday;

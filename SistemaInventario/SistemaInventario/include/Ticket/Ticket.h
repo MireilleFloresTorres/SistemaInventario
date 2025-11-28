@@ -1,6 +1,7 @@
 #pragma once
 #include"Prerequisites.h"
 
+
 class
 Ticket {
 public: 
@@ -21,7 +22,7 @@ public:
 
 	int getnumTicket() const; 
 	double getTotal() const;
-	const std::vector < Iticket >& getProducts() const;
+	const std::vector<Iticket>& getProducts() const;
 	std::string getMetodoPago() const;
 	std::string getFecha() const;
 	std::string getHora() const;
@@ -35,12 +36,4 @@ private:
 	std::vector<Iticket> products; //no confudirme plox
 	double total; 
 	std::string metodoPago; 
-};
-
-//el producto dentro del ticket 
-struct Iticket {
-	std::string nameProduct; 
-	int cantidad; 
-	double precioU; 
-	double subtotal; 
 };

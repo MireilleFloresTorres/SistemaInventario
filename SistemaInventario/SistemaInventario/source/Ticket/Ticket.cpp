@@ -32,5 +32,6 @@ int Ticket::getnumTicket() const { return numTicket; }
 double Ticket::getTotal() const { return total; }
 std::string Ticket::getFecha() const { return fecha; }
 std::string Ticket::getHora() const { return hora; }
-const std::vector<Iticket>& Ticket::getProducts() const { return products;  }
+const std::vector<Iticket>& Ticket::getProducts() const { return products; }//algo está mal y no sé que
+
 std::string Ticket::getMetodoPago() const { return metodoPago;}
