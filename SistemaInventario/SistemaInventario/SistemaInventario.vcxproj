@@ -31,6 +31,8 @@
     <ClCompile Include="source\Producto\ProductoFactory\BebidaFactory.cpp" />
     <ClCompile Include="source\Producto\ProductoFactory\ComidaFactory.cpp" />
     <ClCompile Include="source\Producto\ProductoFactory\MedicamentoFactory.cpp" />
+    <ClCompile Include="source\Strategy\Debito.cpp" />
+    <ClCompile Include="source\Strategy\PagoCredito.cpp" />
     <ClCompile Include="source\Strategy\PagoEfectivo.cpp" />
     <ClCompile Include="source\Ticket\Correo.cpp" />
     <ClCompile Include="source\Ticket\GenerarTicket.cpp" />
@@ -38,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AdapterJson.h" />
+    <ClInclude Include="include\Gas.h" />
     <ClInclude Include="include\json.hpp" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Producto\FabricaAbstracta.h" />
@@ -54,6 +57,7 @@
     <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\ProductoFactory.h" />
+    <ClInclude Include="include\Proveedor.h" />
     <ClInclude Include="include\Strategy\PagoCredito.h" />
     <ClInclude Include="include\Strategy\PagoDebito.h" />
     <ClInclude Include="include\Strategy\PagoEfectivo.h" />

@@ -51,3 +51,10 @@ Fecha {
 			return h + ":" + m;
 		}
 };
+
+enum class
+	TipoCombustible {
+	MAGNA,
+	PREMIUM,
+	DIESEL
+};

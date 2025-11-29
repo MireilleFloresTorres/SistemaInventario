@@ -105,6 +105,12 @@
     <ClCompile Include="source\Strategy\PagoEfectivo.cpp">
       <Filter>Source Files\Strategy</Filter>
     </ClCompile>
+    <ClCompile Include="source\Strategy\Debito.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Strategy\PagoCredito.cpp">
+      <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Prerequisites.h">
@@ -178,6 +184,12 @@
     </ClInclude>
     <ClInclude Include="include\Strategy\PagoCredito.h">
       <Filter>Header Files\Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Gas.h">
+      <Filter>Header Files\Ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Proveedor.h">
+      <Filter>Header Files\Ticket</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
