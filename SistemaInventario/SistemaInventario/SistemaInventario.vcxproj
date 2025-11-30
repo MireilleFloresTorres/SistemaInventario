@@ -35,12 +35,15 @@
     <ClCompile Include="source\Strategy\PagoCredito.cpp" />
     <ClCompile Include="source\Strategy\PagoEfectivo.cpp" />
     <ClCompile Include="source\Ticket\Correo.cpp" />
+    <ClCompile Include="source\Ticket\Gasolinera.cpp" />
     <ClCompile Include="source\Ticket\GenerarTicket.cpp" />
+    <ClCompile Include="source\Ticket\Proveedor.cpp" />
     <ClCompile Include="source\Ticket\Ticket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AdapterJson.h" />
-    <ClInclude Include="include\Gas.h" />
+    <ClInclude Include="include\Command\ComandoCarga.h" />
+    <ClInclude Include="include\Command\Command.h" />
     <ClInclude Include="include\json.hpp" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Producto\FabricaAbstracta.h" />
@@ -57,13 +60,14 @@
     <ClInclude Include="include\Producto\ProductoFactory\ComidaFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\MedicamentoFactory.h" />
     <ClInclude Include="include\Producto\ProductoFactory\ProductoFactory.h" />
-    <ClInclude Include="include\Proveedor.h" />
     <ClInclude Include="include\Strategy\PagoCredito.h" />
     <ClInclude Include="include\Strategy\PagoDebito.h" />
     <ClInclude Include="include\Strategy\PagoEfectivo.h" />
     <ClInclude Include="include\Strategy\PagoStrategy.h" />
     <ClInclude Include="include\Ticket\Correo.h" />
+    <ClInclude Include="include\Ticket\Gasolinera.h" />
     <ClInclude Include="include\Ticket\GenerarTicket.h" />
+    <ClInclude Include="include\Ticket\Proveedor.h" />
     <ClInclude Include="include\Ticket\Ticket.h" />
   </ItemGroup>
   <ItemGroup>

@@ -55,6 +55,9 @@
     <Filter Include="Source Files\Strategy">
       <UniqueIdentifier>{ef36917b-74c6-4d9e-9904-f46ef9e12715}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Command">
+      <UniqueIdentifier>{0edbe693-610b-4bc1-a344-ca628a79b062}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -110,6 +113,12 @@
     </ClCompile>
     <ClCompile Include="source\Strategy\PagoCredito.cpp">
       <Filter>Source Files\Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ticket\Proveedor.cpp">
+      <Filter>Source Files\Ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ticket\Gasolinera.cpp">
+      <Filter>Source Files\Ticket</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,11 +194,17 @@
     <ClInclude Include="include\Strategy\PagoCredito.h">
       <Filter>Header Files\Strategy</Filter>
     </ClInclude>
-    <ClInclude Include="include\Gas.h">
+    <ClInclude Include="include\Ticket\Proveedor.h">
       <Filter>Header Files\Ticket</Filter>
     </ClInclude>
-    <ClInclude Include="include\Proveedor.h">
+    <ClInclude Include="include\Ticket\Gasolinera.h">
       <Filter>Header Files\Ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Command\Command.h">
+      <Filter>Header Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Command\ComandoCarga.h">
+      <Filter>Header Files\Command</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
