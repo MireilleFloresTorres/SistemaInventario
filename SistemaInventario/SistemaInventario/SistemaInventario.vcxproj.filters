@@ -58,6 +58,12 @@
     <Filter Include="Header Files\Command">
       <UniqueIdentifier>{0edbe693-610b-4bc1-a344-ca628a79b062}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Command">
+      <UniqueIdentifier>{ecff62d4-52ed-4abf-8aa4-ccb40d5b32fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Facade">
+      <UniqueIdentifier>{a4d0009a-9fd7-487a-8fe6-58323d789741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -118,6 +124,15 @@
       <Filter>Source Files\Ticket</Filter>
     </ClCompile>
     <ClCompile Include="source\Ticket\Gasolinera.cpp">
+      <Filter>Source Files\Ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Command\ComandoCarga.cpp">
+      <Filter>Source Files\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ticket\TicketGasolinera.cpp">
+      <Filter>Source Files\Ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Ticket\CrearTicketGasolina.cpp">
       <Filter>Source Files\Ticket</Filter>
     </ClCompile>
   </ItemGroup>
@@ -205,6 +220,15 @@
     </ClInclude>
     <ClInclude Include="include\Command\ComandoCarga.h">
       <Filter>Header Files\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ticket\TicketGasolinera.h">
+      <Filter>Header Files\Ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ticket\CrearTicketGasolina.h">
+      <Filter>Header Files\Ticket</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Facade\Facade.h">
+      <Filter>Header Files\Facade</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

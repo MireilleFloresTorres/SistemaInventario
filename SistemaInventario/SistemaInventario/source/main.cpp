@@ -45,7 +45,8 @@ int main() {
     int opcion;
 
     do {
-        std::cout << "Inventario Farmacia Guadalajara" << std::endl;
+        std::cout << "SUPERMARKET" << std::endl;
+        //ya dejo de ser farmacia, ni modo
         std::cout << "1. Agregue un producto" << std::endl;
         std::cout << "2. Edite un producto" << std::endl;
         std::cout << "3. Eliminar un producto" << std::endl;
