@@ -121,21 +121,21 @@ bool SistemaFacade::procesarCargaGasolinera(int tipoCombustible, double litros, 
         mesesStr = std::to_string(meses) + " Meses Sin Intereses";
     }
 
-    proveedor->setPagoStrategy(_strategy);
+    proveedor->setPagoStrategy(estrategia);
 
     // 4. Ejecutar carga usando Command
     ComandoCarga comando(proveedor, tipo, litros);
     comando.ejecutar();
 
     // 5. Crear ticket
-    int numTicket = CrearTicketGasolina::getNum();
+    int numTicket = CrearTicketGasolinera::getNum();
     TicketGasolinera ticket(numTicket);
 
     Fecha fecha;
     fecha.getActual();
     ticket.setFechaHora(fecha.toStringFecha(), fecha.toStringHora());
 
-    ticket.setCombustible(nombreTipo, litros, Proveedor->getPrecio(tipo));
+    ticket.setCombustible(nombreTipo, litros, proveedor->getPrecio(tipo));
     ticket.setMetodoPago(nombreMetodo, mesesStr);
 
     // 6. Número de autorización si no es efectivo
@@ -147,7 +147,7 @@ bool SistemaFacade::procesarCargaGasolinera(int tipoCombustible, double litros, 
     ticket.calcularTotal();
 
     // 8. Generar archivo
-    CrearTicketGasolina::generarArchivo(ticket);
+    CrearTicketGasolinera::generarArchivo(ticket);
 
     // 9. Enviar por correo si se proporcionó
     if (!correo.empty()) {
