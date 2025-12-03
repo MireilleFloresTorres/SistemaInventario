@@ -7,8 +7,8 @@ TicketGasolinera::TicketGasolinera(int numero)
     subtotal(0),
     iva(0),
     total(0),
-    direccion("Av. Universidad 456"),
-    rfc("GAS123456ABC"),
+    direccion("Av. Rosales, Col. Juarez"),
+    rfc("GAS09078PLJ"),
     sucursal("Sucursal 301"),
     regimenFiscal("601 - General de Ley Personas Morales"),
     mesesSinIntereses("1 Exhibicion") {
