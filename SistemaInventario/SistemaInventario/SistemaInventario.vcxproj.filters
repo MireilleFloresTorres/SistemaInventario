@@ -64,6 +64,9 @@
     <Filter Include="Header Files\Facade">
       <UniqueIdentifier>{a4d0009a-9fd7-487a-8fe6-58323d789741}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Facade">
+      <UniqueIdentifier>{6db3b67a-6a0f-40c2-b80a-ce28eebdda9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -134,6 +137,9 @@
     </ClCompile>
     <ClCompile Include="source\Ticket\CrearTicketGasolina.cpp">
       <Filter>Source Files\Ticket</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Facade\SistemaFacade.cpp">
+      <Filter>Source Files\Facade</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -227,7 +233,7 @@
     <ClInclude Include="include\Ticket\CrearTicketGasolina.h">
       <Filter>Header Files\Ticket</Filter>
     </ClInclude>
-    <ClInclude Include="include\Facade\Facade.h">
+    <ClInclude Include="include\Facade\SistemaFacade.h">
       <Filter>Header Files\Facade</Filter>
     </ClInclude>
   </ItemGroup>

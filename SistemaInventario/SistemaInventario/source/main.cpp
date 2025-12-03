@@ -5,6 +5,13 @@
 #include "Producto/ProductoFactory/ComidaFactory.h"
 #include "Producto/ProductoFactory/MedicamentoFactory.h"
 
+#include "Facade/SistemaFacade.h"
+#include "Ticket/Ticket.h"
+#include "Ticket/GenerarTicket.h"
+#include "Ticket/Correo.h"
+#include "Ticket/Gasolinera.h"
+
+
 /**
  * @file main.cpp
  * @file Inventario.h
@@ -31,8 +38,9 @@
   *          - Guardar datos en JSON
   */
 int main() {
-    // Singleton
+    
     Inventario* inventario = Inventario::getInstance();
+    SistemaFacade* sistema = SistemaFacade::getInstance();
 
     // Crear observador para alertas de inventario bajo
     AlertaInventario* alertaInventario = new AlertaInventario();
@@ -55,9 +63,10 @@ int main() {
         std::cout << "6. Mostrar el inventario" <<std::endl;
         std::cout << "7. Guardar el inventario" << std::endl;
         std::cout << "8. Cargar inventario" << std::endl;
-        std::cout << "9. Salir" << std::endl;
+        std::cout << "9. Venta rapida con ticket "<< std::endl;
+        std::cout << "10. Carga gasolinera rapida " << std::endl;
+        std::cout << "11. Salir" << std::endl;
         std::cout << "Selecciona una opción: ";
-
         std::cin >> opcion;
 
         switch (opcion) {
@@ -200,14 +209,84 @@ int main() {
             break;
         }
 
-        case 9: { /** @brief Salir del sistema con opción de guardar */
+        case 9: { // 
+            if (inventario->getProductos().empty()) {
+                std::cout << "Inventario vacio" << std::endl;
+                break;
+            }
+
+            int codigo, cantidad, metodo;
+            std::string correo;
+
+            std::cout << "\n venta rapida " << std::endl;
+            std::cout << "Codigo del producto: ";
+            std::cin  >> codigo;
+            std::cout << "Cantidad: ";
+            std::cin  >> cantidad;
+
+            std::cout << "\nMetodo de pago:" << std::endl;
+            std::cout << "1. Efectivo" << std::endl;
+            std::cout << "2. Debito" << std::endl;
+            std::cout << "3. Credito" << std::endl;
+            std::cout << "Elige una opcion: ";
+            std::cin  >> metodo;
+
+            std::cout << "Desea una factura por correo? (s/n): ";
+            char enviar;
+            std::cin  >> enviar;
+
+            if (enviar == 's' || enviar == 'S') {
+                std::cout << "Correo: ";
+                std::cin  >> correo;
+            }
+
+            //mi facade
+            sistema->procesarVentaFarmacia(codigo, cantidad, metodo, correo);
+            break;
+        }
+
+        case 10: { // gasolinara
+            int tipo, metodo;
+            double litros;
+            std::string correo;
+
+            std::cout << "\nCarga de gasolina" << std::endl;
+            std::cout << "Tipo de gasonlia:" << std::endl;
+            std::cout << "1. Magna $22.50/L" << std::endl;
+            std::cout << "2. Premium $24.80/L" << std::endl;
+            std::cout << "3. Diesel $25.10/L" << std::endl;
+            std::cout << "Selecciona: ";
+            std::cin  >> tipo;
+
+            std::cout << "Litros: ";
+            std::cin  >> litros;
+
+            std::cout << "\nMetodo de pago:" << std::endl;
+            std::cout << "1. Efectivo" << std::endl;
+            std::cout << "2. Debito" << std::endl;
+            std::cout << "3. Credito" <<std:: endl;
+            std::cout << "Selecciona: ";
+            std::cin  >> metodo;
+
+            std::cout << "Desea su factura por correo? (s/n): ";
+            char enviar;
+            std::cin  >> enviar;
+
+            if (enviar == 's' || enviar == 'S') {
+                std::cout << "Correo: ";
+                std::cin  >> correo;
+            }
+
+            sistema->procesarCargaGasolinera(tipo, litros, metodo, correo);
+            break;
+        }
+
+        case 11: { // SALIR
             std::cout << "\nDeseas guardar el inventario antes de salir? (s/n): ";
             char respuesta;
-            std::cin >> respuesta;
+            std::cin  >> respuesta;
             if (respuesta == 's' || respuesta == 'S') {
-                //que de igual la mayuscula
-                inventario->saveJSON("Inventario.json");
-                std::cout << "El inventario ha sido guardado." << std::endl;
+                inventario->saveJSON("inventario.json");
             }
             std::cout << "Saliendo del sistema..." << std::endl;
             break;

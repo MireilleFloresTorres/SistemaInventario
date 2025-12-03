@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Command\ComandoCarga.cpp" />
+    <ClCompile Include="source\Facade\SistemaFacade.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Producto\Inventario\AdapterJson.cpp" />
     <ClCompile Include="source\Producto\Inventario\Inventario.cpp" />
@@ -47,7 +48,7 @@
     <ClInclude Include="include\AdapterJson.h" />
     <ClInclude Include="include\Command\ComandoCarga.h" />
     <ClInclude Include="include\Command\Command.h" />
-    <ClInclude Include="include\Facade\Facade.h" />
+    <ClInclude Include="include\Facade\SistemaFacade.h" />
     <ClInclude Include="include\json.hpp" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Producto\FabricaAbstracta.h" />
