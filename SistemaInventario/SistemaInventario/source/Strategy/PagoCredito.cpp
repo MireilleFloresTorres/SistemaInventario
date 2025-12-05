@@ -1,5 +1,10 @@
 #include "Strategy/PagoDebito.h"
 
+/**
+ * @brief Gestiona el pago con tarjeta de credito.
+ * @param monto Monto a cobrar.
+ * @return true si el pago es válido false en caso contrario.
+ */
 bool PagoDebito::gestionarPago(double monto) {
 	std::string numTarjeta;
 	double admitido;
@@ -15,6 +20,10 @@ bool PagoDebito::gestionarPago(double monto) {
 
 }
 
+/**
+ * @brief Obtiene el tipo de pago.
+ * @return Cadena credito
+ */
 std::string PagoDebito::getTipo() const {
 	return "Debito";
 }

@@ -1,6 +1,10 @@
 #pragma once
 #include "Prerequisites.h"
 
+/**
+ * @class TicketGasolinera
+ * @brief Ticket de gasolinera con datos fiscales, combustible y pago.
+ */
 class TicketGasolinera {
 public:
     TicketGasolinera(int numero);
@@ -13,11 +17,14 @@ public:
     void setNumeroAutorizacion(const std::string& num);
     void setCorreo(const std::string& email);
 
+    /** @brief Calcula subtotal, IVA y total. */
     // Operaciones
     void calcularTotal();
+
+    /** @brief Genera el código de barras. */
     std::string generarCodigoBarras();
 
-    // Getters
+    // Getters breves
     int getNumeroTicket() const;
     double getTotal() const;
     std::string getFecha() const;

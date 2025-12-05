@@ -1,5 +1,10 @@
 #include"Ticket/Proveedor.h"
 
+/**
+ * @class Proveedor
+ * @brief Gestiona precios de GASOLINASs y el procesamiento de pagos en una carga.
+ */
+
 Proveedor::Proveedor() : precioMagna(22.50), precioPremium(24.80), precioDiesel(25.10), _strategy(nullptr), sumTotal(0.0) {}
 
 Proveedor::~Proveedor() {
@@ -8,6 +13,10 @@ Proveedor::~Proveedor() {
     }
 }
 
+/**
+ * @brief Establece la estrategia de pago a utilizar.
+ * @param s Estrategia de pago.
+ */
 void Proveedor::setPagoStrategy(PagoStrategy* s) {
     if (_strategy) {
         delete _strategy;
@@ -15,6 +24,11 @@ void Proveedor::setPagoStrategy(PagoStrategy* s) {
     _strategy = s;
 }
 
+/**
+ * @brief Obtiene el precio por litro según el tipo de combustible.
+ * @param tipo Tipo de combustible solicitado.
+ * @return Precio del combustible.
+ */
 double Proveedor::getPrecio(TipoCombustible tipo) {
     switch (tipo) {
     case TipoCombustible::MAGNA: return precioMagna;
@@ -33,10 +47,18 @@ std::string Proveedor::getNameGas(TipoCombustible tipo) {
     }
 }
 
+/**
+ * @brief Obtiene el total cobrado en la última operación.
+ */
+
 double Proveedor::getsumTotal() const {
     return sumTotal;
 }
 
+/**
+ * @brief Ejecuta la carga de combustible y procesa el pago.
+ * @return true si la operación fue exitosa; false si falla el pago o la cantidad es inválida.
+ */
 bool Proveedor::cargarCombustible(TipoCombustible tipo, double litros) {
     if (litros <= 0) {
         std::cout << "Cantidad invalida" << std::endl;

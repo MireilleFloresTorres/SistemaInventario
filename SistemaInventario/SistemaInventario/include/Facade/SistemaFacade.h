@@ -5,7 +5,10 @@
 #include "Ticket/Gasolinera.h"
 #include "Strategy/PagoStrategy.h"
 
-
+/**
+ * @class SistemaFacade
+ * @brief Fachada que centraliza operaciones de farmacia y gasolinera.
+ */
 class
 SistemaFacade {
 

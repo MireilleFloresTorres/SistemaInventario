@@ -1,5 +1,8 @@
 #include "Command/ComandoCarga.h"
 
+/**
+ * @brief Implementación del comando de carga.
+ */
 ComandoCarga::ComandoCarga(Proveedor* prov, TipoCombustible tip, double litros)
     : m_proveedor(prov),
     m_tipo(tip),

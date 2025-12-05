@@ -1,5 +1,10 @@
 #include "Strategy/PagoEfectivo.h"
 
+/**
+ * @brief Procesa el pago en efectivo.
+ * @param monto Monto total a cobrar.
+ * @return true si el pago es aceptado; false si el dinero es insuficiente.
+ */
 bool PagoEfectivo::gestionarPago(double monto) {
 	double admitido;
 	std::cout << "Monyo a pagar: " << monto << std::endl;

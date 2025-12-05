@@ -1,18 +1,31 @@
 #include "Ticket/CrearTicketGasolina.h"
 
-
+/**
+ * @brief Devuelve un número de ticket incremental.
+ * @return Número de ticket.
+ */
 int CrearTicketGasolinera::contador = 1000;
 
 int CrearTicketGasolinera::getNum() {
     return contador++;
 }
 
+/**
+ * @brief Convierte un monto numérico a texto básico.
+ * @param numero Cantidad total.
+ * @return Representación en texto del monto.
+ */
 std::string CrearTicketGasolinera::numeroATexto(double numero) {
     int entero = (int)numero;
     int centavos = (int)((numero - entero) * 100);
     return std::to_string(entero) + " Pesos " + std::to_string(centavos) + "100";
 }
 
+/**
+ * @brief Genera un archivo .txt con la información del ticket de gasolinera.
+ * @param ticket Ticket a guardar.
+ * @return true si el archivo se generó correctamente, false en caso contrario.
+ */
 bool CrearTicketGasolinera::generarArchivo(const TicketGasolinera& ticket) {
     std::string nombre = "ticket_gas_" + std::to_string(ticket.getNumeroTicket()) + ".txt";
     std::ofstream archivo(nombre);

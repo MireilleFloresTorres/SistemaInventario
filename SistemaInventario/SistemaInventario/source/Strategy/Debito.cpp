@@ -1,5 +1,8 @@
 #include "Strategy/PagoCredito.h"
 
+/**
+ * @brief Solicita número de tarjeta y verifica longitud mínima.
+ */
 bool PagoCredito::gestionarPago(double monto) {
 	std::string numTarjeta;
 	double admitido;

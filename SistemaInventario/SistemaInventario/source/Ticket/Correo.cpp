@@ -1,6 +1,11 @@
 #include"Ticket/Correo.h"
 #include"Ticket/Ticket.h"
 
+/**
+ * @brief Envía por consola la información del ticket simulando el envío de una factura por correo.
+ * @param ticket Ticket con los datos de compra.
+ * @param correo Dirección de correo destino.
+ */
 void Correo::facturaCorreo(const Ticket& ticket, const std::string& correo) {
 	std::cout << "La factura ha sido enviada a: " <<correo<< std::endl; 
 	std::cout << "Ticket# " << ticket.getnumTicket() << std::endl; 

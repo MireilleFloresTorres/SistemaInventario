@@ -7,6 +7,10 @@
 #include "Strategy/PagoCredito.h"
 #include "Command/ComandoCarga.h"
 
+/**
+ * @class SistemaFacade
+ * @brief Punto único de acceso para operaciones de farmacia y gasolinera.
+ */
 SistemaFacade* SistemaFacade::instance = nullptr;
 
 SistemaFacade::SistemaFacade() {
@@ -27,6 +31,14 @@ Inventario* SistemaFacade::getInventario() {
     return inventario;
 }
 
+/**
+    * @brief Procesa una venta de farmacia.
+    * @param codigoProducto Código del producto.
+    * @param cantidad Cantidad solicitada.
+    * @param metodoPago Tipo de pago.
+    * @param correo Correo opcional para enviar factura.
+    * @return True si la venta fue exitosa.
+    */
 bool SistemaFacade::procesarVentaFarmacia(int codigoProducto, int cantidad, int metodoPago, const std::string& correo) {
     // 1. Buscar producto
     Producto* producto = inventario->buscarProducto(codigoProducto);
@@ -79,6 +91,15 @@ bool SistemaFacade::procesarVentaFarmacia(int codigoProducto, int cantidad, int 
     return true;
 }
 
+
+/**
+ * @brief Procesa una carga de combustible.
+ * @param tipoCombustible Tipo elegido.
+ * @param litros Litros a cargar.
+ * @param metodoPago Estrategia de pago.
+ * @param correo Correo opcional.
+ * @return True si la carga fue exitosa.
+ */
 bool SistemaFacade::procesarCargaGasolinera(int tipoCombustible, double litros, int metodoPago, const std::string& correo) {
     // 1. Obtener surtidor
     Proveedor* proveedor = gasolinera->getProveedor();
