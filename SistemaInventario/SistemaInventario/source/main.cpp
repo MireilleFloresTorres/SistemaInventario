@@ -289,6 +289,7 @@ int main() {
                 inventario->saveJSON("inventario.json");
             }
             std::cout << "Saliendo del sistema..." << std::endl;
+            return 0;
             break;
         }
 
